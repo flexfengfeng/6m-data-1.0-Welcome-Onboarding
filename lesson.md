@@ -6,19 +6,11 @@
 
 ### Prerequisite knowledge for this program
 
-Familiarity with Python programming language, at an intermediate level. At least an understanding of and ability to code the following concepts:
-
-- Variables
-- Data types
-- Operators
-- Control structures
-- Loops
-- Built-in methods and functions
-- Classes and objects
+Good news: **no prior coding experience is needed** for this session. Today is all about setting up your tools, one command at a time — and every command comes with a plain-English explanation of what it does and why you're typing it. If you can follow a recipe, you can follow along here.
 
 ### Lesson Overview
 
-This lesson contains a lot of software installations. Learners should expect hiccups and some waiting time while instructor is troubleshooting issues for other learners. 
+This lesson contains a lot of software installations, and installs can be a little bumpy — that's completely normal and not a sign you've done anything wrong. If you're in a live session, there may be short pauses while the instructor helps other learners; if you're studying on your own, some downloads simply take a few minutes. Either way, treat the waiting time as a bonus: use it to read ahead in the pre-class guide, and you'll arrive at the next section a step ahead.
 
 ---
 
@@ -32,7 +24,7 @@ Conceptual knowledge, refer to slides.
 
 To get started, we'll need to set up your environment with essential software applications that will allow you to run models and execute Python and SQL code.
 
-One key aspect of this course is learning to use the Command Line Interface (CLI). The CLI is a powerful tool that data scientists and engineers use to interact with their computers and execute commands efficiently. Instead of clicking through a graphical user interface (GUI), you'll be typing commands into a text terminal application.
+One key aspect of this course is learning to use the Command Line Interface (CLI). The CLI is a powerful tool that data scientists and engineers use to interact with their computers and execute commands efficiently. Instead of clicking through a graphical user interface (GUI), you'll be typing commands into a text terminal application. Think of the terminal as **texting your computer instructions instead of clicking** — you type a short message, press Enter, and the computer texts back its reply.
 
 ![CLI image](./assets/linux_terminal.png)
 
@@ -48,6 +40,12 @@ To help you get started with the CLI, here are some excellent online resources a
 - [Learning the Linux Shell](https://linuxcommand.org/lc3_learning_the_shell.php) - Part 1 of a comprehensive guide to the world of Linux.
 - [Basic Linux Commands (video)](https://www.youtube.com/watch?v=7fs1i7TAMck) - One of the many, many Linux CLI tutorials you can find on YouTube
 
+**Your first three "text messages" to the computer** — you'll use these constantly, so here's a 3-line mini-primer:
+
+- `pwd` = "where am I?" (shows which folder you're currently in)
+- `cd` = "go to this folder" (moves you into another folder)
+- `ls` = "what's in here?" (lists the files in your current folder)
+
 ### Please refer to the [installation](./installation.md) file to install the required applications for this module.
 
 ---
@@ -56,7 +54,11 @@ To help you get started with the CLI, here are some excellent online resources a
 
 ### Python environments
 
+**Why do we need this?** Imagine baking two different cakes in the same mixing bowl without washing it — the flavours would contaminate each other. A **conda environment is a clean, separate mixing bowl for each project**: each one gets its own Python and its own packages, so the "recipe" for one project never contaminates another.
+
 We can use conda to install different versions of Python. Conda also allows us to create and manage virtual environments for different projects. A `conda environment` is a self-contained virtual environment that contains its own Python installation and packages. This allows us to have different versions of Python and packages for different projects, without them conflicting with each other.
+
+The commands below are the everyday moves for working with these "mixing bowls" — listing them, creating a new one, stepping into one, and cleaning one out. You don't need to memorise them; this page works as a cheat sheet you'll return to all module.
 
 #### Get a list of conda environment in the system
 
@@ -152,7 +154,9 @@ python <script_name.py>
 
 ### Git
 
-Git is a version control system which allows us to track changes to our codes.
+**Why do we need this?** Think of **git as a camera that takes snapshots of your project over time**. Every time you reach a good stopping point, you take a photo (a "commit"). If something breaks later, you can always look back at — or return to — an earlier snapshot. Formally, git is a version control system which allows us to track changes to our code.
+
+The commands below follow the photo-taking routine: choose what goes in the shot (`git add`), click the shutter (`git commit`), and check your camera roll (`git log`).
 
 #### Create a git repository
 
@@ -204,7 +208,14 @@ git push
 
 ### Github
 
-Github is a cloud-based hosting service for git repositories. It allows us to store our git repositories in the cloud, and collaborate with other developers.
+**Why do we need this?** If git is the camera taking snapshots, **GitHub is the photo album in the cloud** — a safe place to store your snapshots online, share them, and collaborate with other people. Formally, GitHub is a cloud-based hosting service for git repositories.
+
+Two words you'll see a lot, defined before we use them:
+
+- **Fork** = your own copy of someone else's GitHub project — like photocopying a shared recipe so you can scribble all over your copy without touching the original.
+- **Clone** = downloading a copy of a GitHub project (usually your fork) onto your own computer, so you can actually work on the files.
+
+The commands below move snapshots between your computer and the cloud album: `git clone` to download, `git pull` to fetch the latest, and `git push` to upload your new snapshots.
 
 #### Clone a git repository
 

@@ -12,16 +12,42 @@
 
 ## Software Requirements
 
-| Software | Description | Platform | Details |
-|----------|-------------|----------|---------|
-| WSL | Windows Subsystem for Linux | Windows only | [Installation Guide](#wsl-for-windows) |
-| Visual Studio Code (VSCode) | Source code editor | All platforms | [Installation Guide](#visual-studio-code-vscode) |
-| Git CLI | Command-Line Interface for version control | All platforms | [Installation Guide](#git-cli) |
-| Conda/Miniconda | Package and environment manager | All platforms | [Installation Guide](#condaminiconda) |
-| DBGate/DBeaver | Database viewer | All platforms | [Installation Guide](#duckdb-browser-dbgate) |
-| Test Installation | Confirm if everything is working fine | All platforms | [Verification Guide](#verification-of-installation-mac-and-windows-users) |
+Install the software **in the order shown below**. The order follows when you will actually
+need each tool in the course, so you are never blocked in class.
 
-## WSL for Windows
+| Step | Software | Description | Platform | Needed by | Details |
+|------|----------|-------------|----------|-----------|---------|
+| 1 | DBGate (or DBeaver) | Database viewer for the SQL lessons | All platforms | Lesson 1.3–1.5 | [Installation Guide](#step-1--database-viewer-dbgate) |
+| 2 | WSL | Windows Subsystem for Linux | Windows only | Lesson 1.0 | [Installation Guide](#step-2--wsl-for-windows-windows-users-only) |
+| 3 | Visual Studio Code (VSCode) | Source code editor | All platforms | Lesson 1.0 | [Installation Guide](#step-3--visual-studio-code-vscode) |
+| 4 | Git CLI + GitHub | Version control — used to download every lesson | All platforms | Lesson 1.0–1.1 | [Installation Guide](#step-4--git-cli-and-github) |
+| 5 | Conda/Miniconda | Python package and environment manager | All platforms | Lesson 1.3 assignment, then Lesson 1.6 onwards | [Installation Guide](#step-5--condaminiconda) |
+| 6 | Test Installation | Confirm everything is working | All platforms | Before Lesson 1.3 | [Verification Guide](#step-6--verification-of-installation-mac-and-windows-users) |
+
+### If you are short on time
+
+- **Step 1 (DBGate) takes about five minutes and works on any laptop.** Do it now — it is the tool you will spend the most class time in.
+- **Before your first class (Lesson 1.0/1.1):** finish Steps 2–4. That is enough to join class and clone lessons.
+- **Before the Lesson 1.3 assignment and the Python lessons (1.6 onwards):** finish Step 5, then run the verification in Step 6.
+
+## Step 1 — Database Viewer: DBGate
+
+> **Needed for:** Lessons 1.3, 1.4 and 1.5 — the SQL lessons.
+>
+> **Why this is first:** DBGate is a plain desktop application on **every operating system — Windows, macOS and Linux**. It does not depend on WSL, VSCode, Git or Conda, and Windows users install the normal **Windows** version (not a WSL version). It is the quickest win in this guide, so get it done before anything else.
+
+We will be using DBGate SQL client throughout this course to connect to databases and write SQL code. The free version is called DBGate Community. 
+
+Download and install DbGate Community version [here](https://www.dbgate.io/download-community/).
+
+![alt text](assets/dbGate.png)
+
+### Alternative 
+Alternatively, you can use another Duckdb browser called Dbeaver, you can download and install DBeaver Community [here](https://dbeaver.io/download/)
+
+## Step 2 — WSL for Windows *(Windows users only)*
+
+> **Needed for:** everything from Lesson 1.0 onwards (Windows users). Apart from DBGate in Step 1, install WSL before any of the remaining tools — VSCode, Git and Miniconda are all configured to run inside WSL.
 
 ### *For Windows users only* - Windows Subsystem for Linux (WSL)
 
@@ -45,7 +71,9 @@ Read this [tutorial](https://learn.microsoft.com/en-us/windows/wsl/filesystems) 
 
 Please refer to [Reference - WSL on Windows](reference.md#wsl-on-windows) for more learning resource on WSL.
 
-## Visual Studio Code (VSCode)
+## Step 3 — Visual Studio Code (VSCode)
+
+> **Needed for:** Lesson 1.0 onwards — you will open every lesson, notebook and SQL file in VSCode.
 
 You will need a code editor to write Python or SQL code in the course. VSCode is a popular source code editor used by developers for writing, debugging and editing code across various programming languages. 
 
@@ -80,11 +108,15 @@ In `VSCode`, please checked `Autosave`. It will help in future troubleshooting.
 ### Additional Learning Resource
 Please refer to [Reference - VSCode](reference.md#vscode) for more learning resource on VSCode.
 
-## Git vs GitHub
+## Step 4 — Git CLI and GitHub
+
+> **Needed for:** Lesson 1.0–1.1 — this is how you download (clone) each lesson repository and submit assignments.
+
+### Git vs GitHub
 
 Git and GitHub are two essential tools in software engineering. Git is a version control system that helps developers track changes in their code locally. GitHub is a web-based platform where developers can store and share their Git projects, facilitating collaboration and code management. Together, they enable a workflow where developers work on code locally with Git and then share it on GitHub for others to see, review, and contribute. This combination supports efficient collaboration, version control, and project management, making it indispensable for modern software engineering teams.
 
-## Git CLI
+### Git CLI
 
 We will be using Git extensively in this course and you will need to install the command line interface (CLI) application on your computer.
 
@@ -135,7 +167,9 @@ Windows WSL users may read this official tutorial [Get Started using Git on WSL]
 
 Please refer to [Reference - Git and Github](reference.md#git-and-github) for more learning resource on Git and Github.
 
-## Conda/Miniconda
+## Step 5 — Conda/Miniconda
+
+> **Needed for:** the **Lesson 1.3 assignment** (creating the `ddb` environment to build the DuckDB database file), and from **Lesson 1.6 onwards** to run Python and Jupyter notebooks. The in-class SQL activities in 1.3–1.5 use ready-made `.db` files and only need DBGate.
 
 Conda is a package and environment manager that we will be using throughout this program, to manage our Python packages and environments. Miniconda is a lightweight version of the Anaconda distribution, designed for users who prefer a minimal installation. It includes only the essentials: Python, conda (the package and environment manager), and their dependencies. Unlike Anaconda, which comes preloaded with hundreds of scientific packages, Miniconda allows you to install only the packages you need, making it more flexible and less resource-intensive.
 
@@ -162,18 +196,7 @@ To verify this, your conda command prompt should show `(base) $`
 ### Additional Learning Resource
 Please refer to [Reference - Conda or Miniconda](reference.md#conda-or-miniconda) for more learning resource on Conda/Miniconda.
 
-## DuckDB Browser: DBGate
-
-We will be using DBGate SQL client throughout this course to connect to databases and write SQL code. The free version is called DBGate Community. 
-
-Download and install DbGate Community version [here](https://www.dbgate.io/download-community/).
-
-![alt text](assets/dbGate.png)
-
-### Alternative 
-Alternatively, you can use another Duckdb browser called Dbeaver, you can download and install DBeaver Community [here](https://dbeaver.io/download/)
-
-## Verification of Installation (Mac and Windows Users)
+## Step 6 — Verification of Installation (Mac and Windows Users)
 - To confirm if your github installation is successful, please refer to [Lesson - Cloning a Lesson](lesson.md#cloning-a-lesson) and try to clone this lesson to your PC. If you manage to clone your repository into your PC, we can confirm the git configuration is good.
 
 - Please refer to the following exercise [here](guides/run_conda_python.md) to see if you can create a conda environment and run a python file to create a test database. Please proceed to next step if you manage to run the command without errors.
